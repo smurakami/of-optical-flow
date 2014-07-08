@@ -22,7 +22,7 @@ public:
   ofxIntSlider winsize;
   ofxIntSlider iterations;
   ofxIntSlider polyN;
-  ofxFloatSlider pyluSigma;
+  ofxFloatSlider polySigma;
   ofxIntSlider winSize;
   ofxIntSlider maxLevel;
   ofxFloatSlider maxFeatures;
