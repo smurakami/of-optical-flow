@@ -11,7 +11,26 @@ public:
   void update();
   void draw();
   
+  ofVideoGrabber camera;
+  ofxCv::FlowFarneback farneback;
+  ofxCv::FlowPyrLK pyrLk;
+  ofxCv::Flow * curFlow;
   
+  ofxPanel gui;
+  ofxFloatSlider pyrScale;
+  ofxIntSlider levels;
+  ofxIntSlider winsize;
+  ofxIntSlider iterations;
+  ofxIntSlider polyN;
+  ofxFloatSlider pyluSigma;
+  ofxIntSlider winSize;
+  ofxIntSlider maxLevel;
+  ofxFloatSlider maxFeatures;
+  ofxFloatSlider qualityLevel;
+  ofxFloatSlider minDistance;
+  
+  ofxToggle OPTFLOW_FARNEBACK_GAUSSIAN;
+  ofxToggle useFarneback;
   
   void keyPressed(int key);
   void keyReleased(int key);
