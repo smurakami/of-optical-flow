@@ -1,0 +1,13 @@
+<group>
+	<pyrScale>0.575</pyrScale>
+	<maxFeatures>0.01</maxFeatures>
+	<levels>21</levels>
+	<iterations>2</iterations>
+	<polyN>7</polyN>
+	<polySigma>1.5</polySigma>
+	<OPTFLOW_FARNEBACK_GAUSSIAN>0</OPTFLOW_FARNEBACK_GAUSSIAN>
+	<useFarneback>1</useFarneback>
+	<winSize>32</winSize>
+	<maxLevel>3</maxLevel>
+	<minDistance>4</minDistance>
+</group>

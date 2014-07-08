@@ -34,12 +34,37 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+  camera.update();
+  if(camera.isFrameNew()){
+    if(useFarneback){  // dense optical flow by farneback
+      curFlow = &farneback;
+      farneback.setPyramidScale(pyrScale);
+      farneback.setNumLevels(levels);
+      farneback.setWindowSize(winsize);
+      farneback.setPolyN(polyN);
+      farneback.setPolySigma(polySigma);
+      farneback.setUseGaussian(OPTFLOW_FARNEBACK_GAUSSIAN);
+    } else { // sparse optical flow by image pyramid
+      curFlow = &pyrLk;
+      pyrLk.setMaxFeatures(maxFeatures);
+      pyrLk.setQualityLevel(qualityLevel);
+      pyrLk.setMinDistance(minDistance);
+      pyrLk.setWindowSize(winSize);
+      pyrLk.setMaxLevel(maxLevel);
+    }
+    curFlow->calcOpticalFlow(camera);
+  }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+  ofBackground(0);
+  
+  ofSetColor(255);
+  camera.draw(0, 0, ofGetWidth(), ofGetHeight());
+  curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
 
+  gui.draw();
 }
 
 //--------------------------------------------------------------
