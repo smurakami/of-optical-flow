@@ -7,6 +7,7 @@
 //
 
 #include "Particle.h"
+#include "ofMain.h"
 
 Particle::Particle(float x, float y, float vx, float vy) {
   _x = x;
@@ -16,7 +17,7 @@ Particle::Particle(float x, float y, float vx, float vy) {
   _age = 0;
 }
 
-Particle::~Partice(){
+Particle::~Particle(){
 
 }
 
