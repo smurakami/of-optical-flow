@@ -22,6 +22,18 @@ Particle::~Particle(){
 }
 
 void Particle::update(){
+  ofRectangle rect(0, 0, ofGetWidth(), ofGetHeight());
+  ofVec2f offset(rect.x,rect.y);
+  ofVec2f scale(rect.width/_farneback->getFlow().cols, rect.height/_farneback->getFlow().rows);
+  
+  ofVec2f index = (ofVec2f(_x, _y) - offset) / scale;
+  int iy = int(_y);
+  int ix = int(_x);
+  
+  ofVec2f off = _farneback->getFlowOffset(ix, iy) * scale + offset;
+  _vx = off.x;
+  _vy = off.y;
+  
   _x += _vx;
   _y += _vy;
   _age++;
