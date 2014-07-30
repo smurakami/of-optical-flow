@@ -30,6 +30,9 @@ void ofApp::setup(){
   gui.add(minDistance.setup("minDistance", 4, 1, 16));
   
   curFlow = &farneback;
+  
+  particles = new Particles(&farneback);
+  
 }
 
 //--------------------------------------------------------------
@@ -77,9 +80,9 @@ void ofApp::draw(){
   
   ofSetColor(255);
   camera.draw(0, 0, ofGetWidth(), ofGetHeight());
-//  curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
+  curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
   
-  gui.draw();
+//  gui.draw();
 }
 
 //--------------------------------------------------------------

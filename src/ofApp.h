@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxCv.h"
 #include "ofxGui.h"
+#include "Particles.h"
 
 class ofApp : public ofBaseApp{
   
@@ -10,6 +11,8 @@ public:
   void setup();
   void update();
   void draw();
+  
+  Particles * particles;
   
   ofVideoGrabber camera;
   ofxCv::FlowFarneback farneback;

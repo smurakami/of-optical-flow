@@ -16,6 +16,7 @@
 		5CC34D433F5806179935B89D /* Flow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03A75A648BC4CF1D9DEDD0CE /* Flow.cpp */; };
 		63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6151136D101F857DAE12722 /* ofxCvImage.cpp */; };
 		6AABAB39E82AF5CFEA23A205 /* ContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB4A8427353AED09174BE5 /* ContourFinder.cpp */; };
+		6C9AB1A91988ECE100887526 /* Particles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C9AB1A71988ECE100887526 /* Particles.cpp */; };
 		6CD33D3D196C016100757744 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CD33D2C196C016100757744 /* ofxBaseGui.cpp */; };
 		6CD33D3E196C016100757744 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CD33D2E196C016100757744 /* ofxButton.cpp */; };
 		6CD33D3F196C016100757744 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CD33D31196C016100757744 /* ofxGuiGroup.cpp */; };
@@ -125,6 +126,8 @@
 		67AF0E794FA186DD25454CC9 /* calib3d.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = calib3d.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/calib3d/calib3d.hpp; sourceTree = SOURCE_ROOT; };
 		6B3CDFD1A15E92F074E7D5AE /* RunningBackground.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RunningBackground.h; path = ../../../addons/ofxCv/libs/ofxCv/include/ofxCv/RunningBackground.h; sourceTree = SOURCE_ROOT; };
 		6B907CFBB1B0FEDE76C41AA0 /* heap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = heap.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/heap.h; sourceTree = SOURCE_ROOT; };
+		6C9AB1A71988ECE100887526 /* Particles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particles.cpp; sourceTree = "<group>"; };
+		6C9AB1A81988ECE100887526 /* Particles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particles.h; sourceTree = "<group>"; };
 		6CD33D2C196C016100757744 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBaseGui.cpp; sourceTree = "<group>"; };
 		6CD33D2D196C016100757744 /* ofxBaseGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBaseGui.h; sourceTree = "<group>"; };
 		6CD33D2E196C016100757744 /* ofxButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxButton.cpp; sourceTree = "<group>"; };
@@ -746,6 +749,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				6CD33D46196C115A00757744 /* Particle.cpp */,
 				6CD33D47196C115A00757744 /* Particle.h */,
+				6C9AB1A71988ECE100887526 /* Particles.cpp */,
+				6C9AB1A81988ECE100887526 /* Particles.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -869,6 +874,7 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				6CD33D48196C115A00757744 /* Particle.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				6C9AB1A91988ECE100887526 /* Particles.cpp in Sources */,
 				250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */,
 				1D5F3298C2FA073628012944 /* ofxCvContourFinder.cpp in Sources */,
 				169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */,
