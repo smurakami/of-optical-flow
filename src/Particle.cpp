@@ -7,13 +7,13 @@
 //
 
 #include "Particle.h"
-#include "ofMain.h"
 
-Particle::Particle(float x, float y, float vx, float vy) {
-  _x = x;
-  _y = y;
-  _vx = vx;
-  _vy = vy;
+Particle::Particle(ofVec2f pos, ofVec2f speed, ofxCv::FlowFarneback * farneback) {
+  _x = pos.x;
+  _y = pos.y;
+  _vx = speed.x;
+  _vy = speed.y;
+  _farneback = farneback;
   _age = 0;
 }
 

@@ -10,6 +10,8 @@
 #define __OpticalFlow__Particle__
 
 #include <iostream>
+#include "ofMain.h"
+#include "ofxCv.h"
 
 class Particle {
   float _x;
@@ -17,9 +19,10 @@ class Particle {
   float _vx;
   float _vy;
   int _age;
+  ofxCv::FlowFarneback * _farneback;
   
 public:
-  Particle(float x, float y, float vx, float vy);
+  Particle(ofVec2f pos, ofVec2f speed, ofxCv::FlowFarneback * _farneback);
   ~Particle();
   void update();
   void draw();

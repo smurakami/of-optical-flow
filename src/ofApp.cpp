@@ -58,19 +58,20 @@ void ofApp::update(){
     curFlow->calcOpticalFlow(camera);
     
     if(useFarneback){  // calc particle;
-      ofRectangle rect(0, 0, ofGetWidth(), ofGetHeight());
-      ofVec2f offset(rect.x,rect.y);
-      ofVec2f scale(rect.width/farneback.getFlow().cols, rect.height/farneback.getFlow().rows);
-      int stepSize = 4; //TODO: make class-level parameteric
-      for(int y = 0; y < farneback.getFlow().rows; y += stepSize) {
-        for(int x = 0; x < farneback.getFlow().cols; x += stepSize) {
+//      ofRectangle rect(0, 0, ofGetWidth(), ofGetHeight());
+//      ofVec2f offset(rect.x,rect.y);
+//      ofVec2f scale(rect.width/farneback.getFlow().cols, rect.height/farneback.getFlow().rows);
+//      int stepSize = 4; //TODO: make class-level parameteric
+//      for(int y = 0; y < farneback.getFlow().rows; y += stepSize) {
+//        for(int x = 0; x < farneback.getFlow().cols; x += stepSize) {
 //          ofVec2f cur = ofVec2f(x, y) * scale + offset;
-          ofVec2f off = farneback.getFlowOffset(x, y) * scale + offset;
+//          ofVec2f off = farneback.getFlowOffset(x, y) * scale + offset;
 //          ofLine(cur, cur + off);
-        }
-      }
+//        }
+//      }
     }
     
+    particles->update();
   }
 }
 
@@ -81,13 +82,16 @@ void ofApp::draw(){
   ofSetColor(255);
   camera.draw(0, 0, ofGetWidth(), ofGetHeight());
   curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
+  particles->draw();
   
 //  gui.draw();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+  if (key == 'g') {
+    particles->generate();
+  }
 }
 
 //--------------------------------------------------------------

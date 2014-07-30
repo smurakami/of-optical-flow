@@ -21,6 +21,7 @@ class Particles {
 public:
   Particles(ofxCv::FlowFarneback * farneback);
   ~Particles();
+  void releaseArray();
   void generate();
   void update();
   void draw();
