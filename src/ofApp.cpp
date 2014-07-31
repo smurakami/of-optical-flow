@@ -81,7 +81,9 @@ void ofApp::draw(){
   
   ofSetColor(255);
   camera.draw(0, 0, ofGetWidth(), ofGetHeight());
-//  curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
+  ofSetColor(255, 200, 100);
+  curFlow->draw(0, 0, ofGetWidth(), ofGetHeight());
+  ofSetColor(100, 200, 255);
   particles->draw();
   
 //  gui.draw();
